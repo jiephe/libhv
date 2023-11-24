@@ -273,7 +273,7 @@ protected:
         // printf("on_mqtt type=%d\n", type);
         switch(type) {
         case MQTT_TYPE_CONNECT:
-            // printf("mqtt connected!\n");
+            printf("*********************mqtt connected! %s---%d clientid: %s\n", cli->host, cli->port, cli->client_id);
             break;
         case MQTT_TYPE_DISCONNECT:
             // printf("mqtt disconnected!\n");

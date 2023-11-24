@@ -82,7 +82,8 @@ static int mqtt_client_login(mqtt_client_t* cli) {
         hlogi("MQTT client_id: %.*s", (int)cid_len, cli->client_id);
     }
     len += cid_len;
-    if (cid_len == 0) cli->clean_session = 1;
+    //if (cid_len == 0) cli->clean_session = 1;
+    cli->clean_session = 1;
     if (cli->clean_session) {
         conn_flags |= MQTT_CONN_CLEAN_SESSION;
     }
